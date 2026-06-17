@@ -1,0 +1,641 @@
+{
+  "valueanto": {
+    "total_orders": 13,
+    "avg_orders_per_day": 2.1666666666666665,
+    "avg_orders_per_month": 13.0,
+    "avg_orders_per_year": 13.0,
+    "monthly_trend": {
+      "6": 13
+    },
+    "yearly_trend": {
+      "2025": 13
+    },
+    "weekday_trend": {
+      "Tuesday": 5,
+      "Friday": 3,
+      "Thursday": 3,
+      "Monday": 1,
+      "Wednesday": 1
+    },
+    "top_state": null,
+    "email_success_rate": NaN
+  },
+  "valuebasset": {
+    "total_orders": 91,
+    "avg_orders_per_day": 3.5,
+    "avg_orders_per_month": 45.5,
+    "avg_orders_per_year": 91.0,
+    "monthly_trend": {
+      "5": 10,
+      "6": 81
+    },
+    "yearly_trend": {
+      "2025": 91
+    },
+    "weekday_trend": {
+      "Monday": 22,
+      "Thursday": 21,
+      "Tuesday": 19,
+      "Friday": 15,
+      "Wednesday": 12,
+      "Saturday": 1,
+      "Sunday": 1
+    },
+    "top_state": null,
+    "email_success_rate": 100.0
+  },
+  "valuebenson": {
+    "total_orders": 376,
+    "avg_orders_per_day": 3.1074380165289255,
+    "avg_orders_per_month": 41.77777777777778,
+    "avg_orders_per_year": 188.0,
+    "monthly_trend": {
+      "1": 21,
+      "3": 17,
+      "4": 30,
+      "7": 88,
+      "8": 84,
+      "9": 28,
+      "10": 14,
+      "11": 38,
+      "12": 56
+    },
+    "yearly_trend": {
+      "2025": 308,
+      "2026": 68
+    },
+    "weekday_trend": {
+      "Wednesday": 79,
+      "Monday": 79,
+      "Thursday": 78,
+      "Tuesday": 72,
+      "Friday": 65,
+      "Saturday": 3
+    },
+    "top_state": null,
+    "email_success_rate": NaN
+  },
+  "valuebrian": {
+    "total_orders": 287,
+    "avg_orders_per_day": 2.2598425196850394,
+    "avg_orders_per_month": 31.88888888888889,
+    "avg_orders_per_year": 143.5,
+    "monthly_trend": {
+      "1": 13,
+      "2": 19,
+      "3": 36,
+      "4": 67,
+      "5": 41,
+      "6": 27,
+      "10": 29,
+      "11": 28,
+      "12": 27
+    },
+    "yearly_trend": {
+      "2025": 84,
+      "2026": 203
+    },
+    "weekday_trend": {
+      "Tuesday": 60,
+      "Wednesday": 59,
+      "Thursday": 55,
+      "Monday": 54,
+      "Friday": 54,
+      "Saturday": 5
+    },
+    "top_state": null,
+    "email_success_rate": NaN
+  },
+  "valuedavid": {
+    "total_orders": 12,
+    "avg_orders_per_day": 3.0,
+    "avg_orders_per_month": 12.0,
+    "avg_orders_per_year": 12.0,
+    "monthly_trend": {
+      "7": 12
+    },
+    "yearly_trend": {
+      "2025": 12
+    },
+    "weekday_trend": {
+      "Wednesday": 4,
+      "Thursday": 4,
+      "Friday": 3,
+      "Tuesday": 1
+    },
+    "top_state": null,
+    "email_success_rate": NaN
+  },
+  "valueedwin": {
+    "total_orders": 299,
+    "avg_orders_per_day": 3.25,
+    "avg_orders_per_month": 49.833333333333336,
+    "avg_orders_per_year": 149.5,
+    "monthly_trend": {
+      "1": 75,
+      "2": 59,
+      "3": 20,
+      "10": 17,
+      "11": 61,
+      "12": 67
+    },
+    "yearly_trend": {
+      "2025": 145,
+      "2026": 154
+    },
+    "weekday_trend": {
+      "Monday": 68,
+      "Tuesday": 64,
+      "Wednesday": 60,
+      "Friday": 57,
+      "Thursday": 46,
+      "Sunday": 3,
+      "Saturday": 1
+    },
+    "top_state": null,
+    "email_success_rate": NaN
+  },
+  "valuegeorge": {
+    "total_orders": 185,
+    "avg_orders_per_day": 1.9680851063829787,
+    "avg_orders_per_month": 26.428571428571427,
+    "avg_orders_per_year": 92.5,
+    "monthly_trend": {
+      "1": 22,
+      "2": 25,
+      "3": 43,
+      "4": 42,
+      "5": 28,
+      "6": 19,
+      "12": 6
+    },
+    "yearly_trend": {
+      "2025": 6,
+      "2026": 179
+    },
+    "weekday_trend": {
+      "Tuesday": 43,
+      "Thursday": 42,
+      "Monday": 37,
+      "Friday": 32,
+      "Wednesday": 30,
+      "Saturday": 1
+    },
+    "top_state": null,
+    "email_success_rate": 82.6086956521739
+  },
+  "valuehubert": {
+    "total_orders": 5,
+    "avg_orders_per_day": 1.6666666666666667,
+    "avg_orders_per_month": 5.0,
+    "avg_orders_per_year": 5.0,
+    "monthly_trend": {
+      "3": 5
+    },
+    "yearly_trend": {
+      "2026": 5
+    },
+    "weekday_trend": {
+      "Monday": 3,
+      "Friday": 1,
+      "Tuesday": 1
+    },
+    "top_state": null,
+    "email_success_rate": NaN
+  },
+  "valuejessica": {
+    "total_orders": 506,
+    "avg_orders_per_day": 4.685185185185185,
+    "avg_orders_per_month": 72.28571428571429,
+    "avg_orders_per_year": 253.0,
+    "monthly_trend": {
+      "2": 25,
+      "3": 103,
+      "4": 111,
+      "5": 97,
+      "6": 54,
+      "11": 87,
+      "12": 29
+    },
+    "yearly_trend": {
+      "2025": 116,
+      "2026": 390
+    },
+    "weekday_trend": {
+      "Thursday": 106,
+      "Wednesday": 105,
+      "Tuesday": 97,
+      "Monday": 96,
+      "Friday": 91,
+      "Saturday": 11
+    },
+    "top_state": null,
+    "email_success_rate": NaN
+  },
+  "valuekevin": {
+    "total_orders": 221,
+    "avg_orders_per_day": 2.402173913043478,
+    "avg_orders_per_month": 44.2,
+    "avg_orders_per_year": 221.0,
+    "monthly_trend": {
+      "2": 35,
+      "3": 53,
+      "4": 47,
+      "5": 55,
+      "6": 31
+    },
+    "yearly_trend": {
+      "2026": 221
+    },
+    "weekday_trend": {
+      "Thursday": 51,
+      "Monday": 45,
+      "Friday": 43,
+      "Tuesday": 36,
+      "Wednesday": 35,
+      "Saturday": 11
+    },
+    "top_state": null,
+    "email_success_rate": NaN
+  },
+  "valuenina": {
+    "total_orders": 508,
+    "avg_orders_per_day": 5.08,
+    "avg_orders_per_month": 84.66666666666667,
+    "avg_orders_per_year": 254.0,
+    "monthly_trend": {
+      "1": 107,
+      "2": 137,
+      "3": 100,
+      "10": 1,
+      "11": 68,
+      "12": 95
+    },
+    "yearly_trend": {
+      "2025": 164,
+      "2026": 344
+    },
+    "weekday_trend": {
+      "Monday": 105,
+      "Wednesday": 104,
+      "Tuesday": 104,
+      "Friday": 101,
+      "Thursday": 90,
+      "Saturday": 4
+    },
+    "top_state": null,
+    "email_success_rate": 100.0
+  },
+  "valuerebecca": {
+    "total_orders": 5,
+    "avg_orders_per_day": 1.25,
+    "avg_orders_per_month": 5.0,
+    "avg_orders_per_year": 5.0,
+    "monthly_trend": {
+      "10": 5
+    },
+    "yearly_trend": {
+      "2025": 5
+    },
+    "weekday_trend": {
+      "Monday": 2,
+      "Thursday": 1,
+      "Tuesday": 1,
+      "Friday": 1
+    },
+    "top_state": null,
+    "email_success_rate": NaN
+  },
+  "valuericardo": {
+    "total_orders": 505,
+    "avg_orders_per_day": 2.6302083333333335,
+    "avg_orders_per_month": 42.083333333333336,
+    "avg_orders_per_year": 252.5,
+    "monthly_trend": {
+      "1": 82,
+      "2": 63,
+      "3": 44,
+      "4": 22,
+      "5": 42,
+      "6": 16,
+      "7": 7,
+      "8": 52,
+      "9": 27,
+      "10": 55,
+      "11": 40,
+      "12": 55
+    },
+    "yearly_trend": {
+      "2025": 236,
+      "2026": 269
+    },
+    "weekday_trend": {
+      "Wednesday": 122,
+      "Monday": 105,
+      "Tuesday": 94,
+      "Thursday": 90,
+      "Friday": 88,
+      "Saturday": 5,
+      "Sunday": 1
+    },
+    "top_state": null,
+    "email_success_rate": NaN
+  },
+  "valuerichard": {
+    "total_orders": 6,
+    "avg_orders_per_day": 1.2,
+    "avg_orders_per_month": 3.0,
+    "avg_orders_per_year": 6.0,
+    "monthly_trend": {
+      "5": 4,
+      "6": 2
+    },
+    "yearly_trend": {
+      "2026": 6
+    },
+    "weekday_trend": {
+      "Thursday": 4,
+      "Friday": 1,
+      "Wednesday": 1
+    },
+    "top_state": null,
+    "email_success_rate": NaN
+  },
+  "valuerodney": {
+    "total_orders": 61,
+    "avg_orders_per_day": 5.083333333333333,
+    "avg_orders_per_month": 30.5,
+    "avg_orders_per_year": 61.0,
+    "monthly_trend": {
+      "2": 1,
+      "3": 60
+    },
+    "yearly_trend": {
+      "2026": 61
+    },
+    "weekday_trend": {
+      "Friday": 16,
+      "Monday": 15,
+      "Tuesday": 13,
+      "Wednesday": 11,
+      "Thursday": 6
+    },
+    "top_state": null,
+    "email_success_rate": NaN
+  },
+  "valuerodney2": {
+    "total_orders": 198,
+    "avg_orders_per_day": 4.4,
+    "avg_orders_per_month": 49.5,
+    "avg_orders_per_year": 198.0,
+    "monthly_trend": {
+      "3": 16,
+      "4": 82,
+      "5": 84,
+      "6": 16
+    },
+    "yearly_trend": {
+      "2026": 198
+    },
+    "weekday_trend": {
+      "Wednesday": 52,
+      "Tuesday": 52,
+      "Monday": 41,
+      "Thursday": 32,
+      "Friday": 21
+    },
+    "top_state": null,
+    "email_success_rate": NaN
+  },
+  "valuesam": {
+    "total_orders": 425,
+    "avg_orders_per_day": 2.5,
+    "avg_orders_per_month": 35.416666666666664,
+    "avg_orders_per_year": 212.5,
+    "monthly_trend": {
+      "1": 31,
+      "2": 27,
+      "3": 53,
+      "4": 74,
+      "5": 59,
+      "6": 23,
+      "7": 1,
+      "8": 20,
+      "9": 38,
+      "10": 49,
+      "11": 30,
+      "12": 20
+    },
+    "yearly_trend": {
+      "2025": 158,
+      "2026": 267
+    },
+    "weekday_trend": {
+      "Tuesday": 102,
+      "Wednesday": 95,
+      "Thursday": 87,
+      "Monday": 70,
+      "Friday": 66,
+      "Saturday": 4,
+      "Sunday": 1
+    },
+    "top_state": null,
+    "email_success_rate": NaN
+  },
+  "valuesergio": {
+    "total_orders": 9,
+    "avg_orders_per_day": 1.125,
+    "avg_orders_per_month": 9.0,
+    "avg_orders_per_year": 9.0,
+    "monthly_trend": {
+      "5": 9
+    },
+    "yearly_trend": {
+      "2026": 9
+    },
+    "weekday_trend": {
+      "Tuesday": 2,
+      "Friday": 2,
+      "Monday": 2,
+      "Saturday": 1,
+      "Wednesday": 1,
+      "Thursday": 1
+    },
+    "top_state": null,
+    "email_success_rate": NaN
+  },
+  "valuestaples": {
+    "total_orders": 6,
+    "avg_orders_per_day": 1.0,
+    "avg_orders_per_month": 3.0,
+    "avg_orders_per_year": 3.0,
+    "monthly_trend": {
+      "1": 2,
+      "12": 4
+    },
+    "yearly_trend": {
+      "2025": 4,
+      "2026": 2
+    },
+    "weekday_trend": {
+      "Friday": 3,
+      "Monday": 1,
+      "Tuesday": 1,
+      "Wednesday": 1
+    },
+    "top_state": null,
+    "email_success_rate": NaN
+  },
+  "valuesusan": {
+    "total_orders": 417,
+    "avg_orders_per_day": 2.542682926829268,
+    "avg_orders_per_month": 34.75,
+    "avg_orders_per_year": 208.5,
+    "monthly_trend": {
+      "1": 18,
+      "2": 28,
+      "3": 58,
+      "4": 50,
+      "5": 49,
+      "6": 46,
+      "7": 48,
+      "8": 7,
+      "9": 1,
+      "10": 41,
+      "11": 35,
+      "12": 36
+    },
+    "yearly_trend": {
+      "2025": 209,
+      "2026": 208
+    },
+    "weekday_trend": {
+      "Thursday": 111,
+      "Tuesday": 92,
+      "Friday": 79,
+      "Wednesday": 78,
+      "Monday": 53,
+      "Saturday": 3,
+      "Sunday": 1
+    },
+    "top_state": null,
+    "email_success_rate": NaN
+  },
+  "valuetina": {
+    "total_orders": 11,
+    "avg_orders_per_day": 1.375,
+    "avg_orders_per_month": 5.5,
+    "avg_orders_per_year": 11.0,
+    "monthly_trend": {
+      "2": 1,
+      "3": 10
+    },
+    "yearly_trend": {
+      "2026": 11
+    },
+    "weekday_trend": {
+      "Wednesday": 3,
+      "Thursday": 3,
+      "Friday": 2,
+      "Monday": 2,
+      "Tuesday": 1
+    },
+    "top_state": null,
+    "email_success_rate": NaN
+  },
+  "valuetonja": {
+    "total_orders": 8,
+    "avg_orders_per_day": 2.6666666666666665,
+    "avg_orders_per_month": 8.0,
+    "avg_orders_per_year": 8.0,
+    "monthly_trend": {
+      "10": 8
+    },
+    "yearly_trend": {
+      "2025": 8
+    },
+    "weekday_trend": {
+      "Tuesday": 5,
+      "Friday": 2,
+      "Thursday": 1
+    },
+    "top_state": null,
+    "email_success_rate": NaN
+  },
+  "valuevictor": {
+    "total_orders": 81,
+    "avg_orders_per_day": 2.892857142857143,
+    "avg_orders_per_month": 13.5,
+    "avg_orders_per_year": 40.5,
+    "monthly_trend": {
+      "1": 6,
+      "2": 2,
+      "4": 47,
+      "5": 16,
+      "11": 2,
+      "12": 8
+    },
+    "yearly_trend": {
+      "2025": 10,
+      "2026": 71
+    },
+    "weekday_trend": {
+      "Wednesday": 32,
+      "Monday": 18,
+      "Thursday": 12,
+      "Tuesday": 11,
+      "Friday": 7,
+      "Saturday": 1
+    },
+    "top_state": null,
+    "email_success_rate": NaN
+  },
+  "valuewarren": {
+    "total_orders": 30,
+    "avg_orders_per_day": 1.5,
+    "avg_orders_per_month": 7.5,
+    "avg_orders_per_year": 30.0,
+    "monthly_trend": {
+      "3": 3,
+      "4": 16,
+      "5": 9,
+      "6": 2
+    },
+    "yearly_trend": {
+      "2026": 30
+    },
+    "weekday_trend": {
+      "Monday": 9,
+      "Tuesday": 8,
+      "Wednesday": 7,
+      "Friday": 3,
+      "Thursday": 3
+    },
+    "top_state": null,
+    "email_success_rate": NaN
+  },
+  "valuewillie": {
+    "total_orders": 185,
+    "avg_orders_per_day": 4.204545454545454,
+    "avg_orders_per_month": 61.666666666666664,
+    "avg_orders_per_year": 185.0,
+    "monthly_trend": {
+      "4": 75,
+      "5": 71,
+      "6": 39
+    },
+    "yearly_trend": {
+      "2026": 185
+    },
+    "weekday_trend": {
+      "Wednesday": 44,
+      "Friday": 38,
+      "Monday": 37,
+      "Tuesday": 33,
+      "Thursday": 32,
+      "Sunday": 1
+    },
+    "top_state": null,
+    "email_success_rate": NaN
+  }
+}

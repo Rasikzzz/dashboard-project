@@ -1,0 +1,152 @@
+[
+  {
+    "client": "valuenina",
+    "total_orders": 508,
+    "email_success_rate": 100.0,
+    "rank": 1
+  },
+  {
+    "client": "valuejessica",
+    "total_orders": 506,
+    "email_success_rate": NaN,
+    "rank": 2
+  },
+  {
+    "client": "valuericardo",
+    "total_orders": 505,
+    "email_success_rate": NaN,
+    "rank": 3
+  },
+  {
+    "client": "valuesam",
+    "total_orders": 425,
+    "email_success_rate": NaN,
+    "rank": 4
+  },
+  {
+    "client": "valuesusan",
+    "total_orders": 417,
+    "email_success_rate": NaN,
+    "rank": 5
+  },
+  {
+    "client": "valuebenson",
+    "total_orders": 376,
+    "email_success_rate": NaN,
+    "rank": 6
+  },
+  {
+    "client": "valueedwin",
+    "total_orders": 299,
+    "email_success_rate": NaN,
+    "rank": 7
+  },
+  {
+    "client": "valuebrian",
+    "total_orders": 287,
+    "email_success_rate": NaN,
+    "rank": 8
+  },
+  {
+    "client": "valuekevin",
+    "total_orders": 221,
+    "email_success_rate": NaN,
+    "rank": 9
+  },
+  {
+    "client": "valuerodney2",
+    "total_orders": 198,
+    "email_success_rate": NaN,
+    "rank": 10
+  },
+  {
+    "client": "valuegeorge",
+    "total_orders": 185,
+    "email_success_rate": 82.6086956521739,
+    "rank": 11
+  },
+  {
+    "client": "valuewillie",
+    "total_orders": 185,
+    "email_success_rate": NaN,
+    "rank": 12
+  },
+  {
+    "client": "valuebasset",
+    "total_orders": 91,
+    "email_success_rate": 100.0,
+    "rank": 13
+  },
+  {
+    "client": "valuevictor",
+    "total_orders": 81,
+    "email_success_rate": NaN,
+    "rank": 14
+  },
+  {
+    "client": "valuerodney",
+    "total_orders": 61,
+    "email_success_rate": NaN,
+    "rank": 15
+  },
+  {
+    "client": "valuewarren",
+    "total_orders": 30,
+    "email_success_rate": NaN,
+    "rank": 16
+  },
+  {
+    "client": "valueanto",
+    "total_orders": 13,
+    "email_success_rate": NaN,
+    "rank": 17
+  },
+  {
+    "client": "valuedavid",
+    "total_orders": 12,
+    "email_success_rate": NaN,
+    "rank": 18
+  },
+  {
+    "client": "valuetina",
+    "total_orders": 11,
+    "email_success_rate": NaN,
+    "rank": 19
+  },
+  {
+    "client": "valuesergio",
+    "total_orders": 9,
+    "email_success_rate": NaN,
+    "rank": 20
+  },
+  {
+    "client": "valuetonja",
+    "total_orders": 8,
+    "email_success_rate": NaN,
+    "rank": 21
+  },
+  {
+    "client": "valuestaples",
+    "total_orders": 6,
+    "email_success_rate": NaN,
+    "rank": 22
+  },
+  {
+    "client": "valuerichard",
+    "total_orders": 6,
+    "email_success_rate": NaN,
+    "rank": 23
+  },
+  {
+    "client": "valuehubert",
+    "total_orders": 5,
+    "email_success_rate": NaN,
+    "rank": 24
+  },
+  {
+    "client": "valuerebecca",
+    "total_orders": 5,
+    "email_success_rate": NaN,
+    "rank": 25
+  }
+]
