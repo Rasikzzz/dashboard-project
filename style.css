@@ -157,6 +157,17 @@ body {
     animation: pulse-dot 2s ease-in-out infinite;
 }
 
+.sidebar-footer .logout-link {
+    margin-left: auto;
+    color: #6a7a8a;
+    text-decoration: none;
+    font-size: 11px;
+    transition: color 0.2s;
+}
+.sidebar-footer .logout-link:hover {
+    color: #ff6b6b;
+}
+
 /* ---------- MAIN CONTENT ---------- */
 .main {
     flex: 1;
@@ -191,7 +202,6 @@ body {
     color: #ffffff;
 }
 
-/* ---------- HEADER BADGE (small font, aesthetic) ---------- */
 .header-badge {
     display: flex;
     align-items: center;
@@ -205,12 +215,6 @@ body {
     color: #b0c4d4;
     letter-spacing: 0.25px;
     white-space: nowrap;
-    transition: all 0.2s ease;
-}
-
-.header-badge:hover {
-    background: rgba(0, 255, 100, 0.10);
-    border-color: rgba(0, 255, 100, 0.20);
 }
 
 .badge-separator {
@@ -221,6 +225,21 @@ body {
 
 #last-updated {
     color: #8a9aaa;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-header .label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #9aabbb;
 }
 
 /* ---------- KPI GRID ---------- */
