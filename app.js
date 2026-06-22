@@ -41,26 +41,41 @@ function getColor(index, alpha = 1) {
 
 // ---- Render date range ----
 function renderDateRange() {
-    if (!DATA || !DATA.global.date_range) return;
-    const { start, end } = DATA.global.date_range;
-    if (dateRangeEl) {
-        dateRangeEl.textContent = `📅 ${start} – ${end}`;
+    if (!dateRangeEl) {
+        console.error('date-range element not found');
+        return;
     }
+    if (!DATA || !DATA.global) {
+        console.warn('No data yet');
+        dateRangeEl.textContent = '⏳ loading...';
+        return;
+    }
+    if (!DATA.global.date_range) {
+        console.warn('No date_range in data – is the PHP script up to date?');
+        dateRangeEl.textContent = '📅 range unavailable';
+        return;
+    }
+    const { start, end } = DATA.global.date_range;
+    dateRangeEl.textContent = `📅 ${start} – ${end}`;
+    console.log('Date range set:', start, end);
 }
 
 // ---- Fetch data ----
 async function loadData() {
     try {
+        console.log('Fetching data...');
         const response = await fetch('https://insights.bpoautoaccept.com/get_data.php');
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const jsonData = await response.json();
         DATA = jsonData;
-        renderDateRange();
+        console.log('Data loaded, keys:', Object.keys(DATA));
+        console.log('Global keys:', Object.keys(DATA.global));
+        renderDateRange();   // <-- explicitly called here
         renderSidebar();
         switchView(currentView);
     } catch (error) {
         console.error('Failed to load data:', error);
-        dateRangeEl.textContent = '⚠️ data unavailable';
+        if (dateRangeEl) dateRangeEl.textContent = '⚠️ data unavailable';
     }
 }
 
