@@ -1,40 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: white;
-  margin: 0;
-  padding: 0;
+    background: #f5f7fb;
+    padding: 24px;
+    color: #1a1a2e;
 }
 
 .container {
-  width: 90%;
-  margin: auto;
-  padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 h1 {
-  text-align: center;
-  margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #0f0f1f;
 }
 
 .card {
-  background: #1e293b;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 10px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 24px 28px;
+    margin-bottom: 32px;
 }
 
+.card h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: #2d3748;
+}
+
+/* KPI Grid */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.kpi-item {
+    background: #f8fafc;
+    padding: 14px 18px;
+    border-radius: 10px;
+    border-left: 4px solid #3b82f6;
+}
+
+.kpi-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-bottom: 4px;
+}
+
+.kpi-value {
+    display: block;
+    font-size: 26px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+/* Table */
 table {
-  width: 100%;
-  border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
 }
 
-th, td {
-  padding: 12px;
-  border-bottom: 1px solid #334155;
-  text-align: left;
+thead {
+    background: #f1f5f9;
 }
 
 th {
-  background: #334155;
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    color: #334155;
+}
+
+td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e9edf2;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .kpi-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
