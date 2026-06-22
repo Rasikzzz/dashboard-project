@@ -194,7 +194,7 @@ body {
 .header-card .header-meta {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
@@ -213,8 +213,16 @@ body {
 }
 
 .header-card .last-updated {
+    font-size: 12px;
+    font-weight: 300;
     color: #8a9aaa;
-    font-size: 11px;
+    letter-spacing: 0.3px;
+}
+
+.header-card .separator {
+    color: #4a5a6a;
+    font-size: 14px;
+    font-weight: 100;
 }
 
 .card-header {
