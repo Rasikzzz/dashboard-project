@@ -1,39 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mail BPO · Viewer</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
+    <div class="dashboard">
 
-        <h1>📊 Business Dashboard</h1>
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-title">
+                mail bpo
+                <span class="version">v1 <span class="live-indicator"></span></span>
+            </div>
+            <div class="client-list" id="inspector-list">
+                <!-- populated by JS -->
+            </div>
+            <div class="sidebar-footer">
+                <span class="dot">●</span> <span id="total-orders-footer">0</span> orders
+            </div>
+        </aside>
 
-        <!-- GLOBAL INSIGHTS -->
-        <div class="card">
-            <h2>🌍 Global Insights</h2>
-            <div id="global"></div>
-        </div>
+        <!-- MAIN CONTENT -->
+        <main class="main">
 
-        <!-- LEADERBOARD -->
-        <div class="card">
-            <h2>🏆 Client Leaderboard</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>Client</th>
-                        <th>Total Orders</th>
-                        <th>Email Success %</th>
-                    </tr>
-                </thead>
-                <tbody id="leaderboard"></tbody>
-            </table>
-        </div>
+            <!-- Header -->
+            <div class="card header-card">
+                <h1 id="page-title">overall</h1>
+                <span class="meta" id="last-updated">updating…</span>
+            </div>
 
+            <!-- KPI Grid -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="label">metrics</span>
+                </div>
+                <div class="metric-grid" id="kpi-grid">
+                    <!-- populated by JS -->
+                </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div class="chart-row">
+                <div class="card chart-box">
+                    <h4 id="stateChartTitle">top states</h4>
+                    <div class="chart-container">
+                        <canvas id="stateChart"></canvas>
+                    </div>
+                </div>
+                <div class="card chart-box">
+                    <h4 id="itemChartTitle">monthly trend</h4>
+                    <div class="chart-container">
+                        <canvas id="itemChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Monthly Trend (full width) -->
+            <div class="card chart-box full-width">
+                <h4 id="monthlyChartTitle">orders per month</h4>
+                <div class="chart-container" style="height:180px;">
+                    <canvas id="monthlyChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Leaderboard Table -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="label" id="table-title">leaderboard</span>
+                </div>
+                <div style="overflow-x:auto;">
+                    <table id="data-table">
+                        <thead><tr></tr></thead>
+                        <tbody id="table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
     </div>
+
     <script src="app.js"></script>
 </body>
 </html>
