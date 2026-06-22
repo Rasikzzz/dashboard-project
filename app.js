@@ -18,7 +18,6 @@ const tableBody       = document.getElementById('table-body');
 const tableTitle      = document.getElementById('table-title');
 const inspectorList   = document.getElementById('inspector-list');
 const totalOrdersFooter = document.getElementById('total-orders-footer');
-const lastUpdated     = document.getElementById('last-updated');
 const dateRangeEl     = document.getElementById('date-range');
 
 const stateChartTitle   = document.getElementById('stateChartTitle');
@@ -56,15 +55,12 @@ async function loadData() {
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const jsonData = await response.json();
         DATA = jsonData;
-        const now = new Date();
-        const dateStr = now.toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' });
-        lastUpdated.textContent = `updated ${dateStr}`;
         renderDateRange();
         renderSidebar();
         switchView(currentView);
     } catch (error) {
         console.error('Failed to load data:', error);
-        lastUpdated.textContent = '⚠️ update failed';
+        dateRangeEl.textContent = '⚠️ data unavailable';
     }
 }
 
@@ -202,11 +198,11 @@ function renderOverall() {
     updateChartTitles(true);
     const kpis = [
         { label: 'Total Orders', value: g.total_orders },
-        { label: 'Avg / Day', value: round(g.avg_per_day) },
-        { label: 'Avg / Week', value: round(g.avg_per_week) },
-        { label: 'Avg / Month', value: round(g.avg_per_month) },
-        { label: 'Avg / Year', value: round(g.avg_per_year) },
-        { label: 'Email Rate', value: round(g.email_success_rate_global) + '%' }, // ✅ FIXED
+        { label: 'Avg / Day', value: g.avg_per_day.toFixed(2) },
+        { label: 'Avg / Week', value: g.avg_per_week.toFixed(2) },
+        { label: 'Avg / Month', value: g.avg_per_month.toFixed(2) },
+        { label: 'Avg / Year', value: g.avg_per_year.toFixed(2) },
+        { label: 'Email Rate', value: g.email_success_rate_global.toFixed(2) + '%' },
         { label: 'Inspectors', value: Object.keys(DATA.per_inspector).length },
     ];
     renderKPIs(kpis);
@@ -221,8 +217,8 @@ function renderOverall() {
         item.rank,
         cleanInspectorName(item.inspector),
         item.total_orders,
-        round(item.email_success_rate) + '%',
-        round(item.avg_per_day)
+        item.email_success_rate.toFixed(2) + '%',
+        item.avg_per_day.toFixed(2)
     ]);
     renderTable(headers, rows);
 }
@@ -236,11 +232,11 @@ function renderInspector(name) {
     updateChartTitles(false);
     const kpis = [
         { label: 'Total Orders', value: data.total_orders },
-        { label: 'Avg / Day', value: round(data.avg_per_day) },
-        { label: 'Avg / Week', value: round(data.avg_per_week) },
-        { label: 'Avg / Month', value: round(data.avg_per_month) },
-        { label: 'Avg / Year', value: round(data.avg_per_year) },
-        { label: 'Email Rate', value: round(data.email_success_rate) + '%' }, // also fixed here
+        { label: 'Avg / Day', value: data.avg_per_day.toFixed(2) },
+        { label: 'Avg / Week', value: data.avg_per_week.toFixed(2) },
+        { label: 'Avg / Month', value: data.avg_per_month.toFixed(2) },
+        { label: 'Avg / Year', value: data.avg_per_year.toFixed(2) },
+        { label: 'Email Rate', value: data.email_success_rate.toFixed(2) + '%' },
         { label: 'Top State', value: data.top_state || '—' },
         { label: 'Days Active', value: data.date_range_days || '—' },
     ];
