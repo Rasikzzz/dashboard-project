@@ -1,5 +1,5 @@
 // ============================================================
-//  MAIL BPO · VIEWER  –  app.js (Live)
+//  ESTREET VIEWER  –  app.js (Live + Auth)
 //  Nothing Phone aesthetic – neon green, minimal.
 // ============================================================
 
@@ -40,7 +40,26 @@ function getColor(index, alpha = 1) {
     return `rgba(0, 255, 136, ${Math.min(op, 1)})`;
 }
 
-// ---- Render date range (no icon) ----
+// ---- Authentication check ----
+async function checkAuth() {
+    try {
+        const response = await fetch('https://insights.bpoautoaccept.com/login.php?action=check', {
+            credentials: 'include'
+        });
+        if (response.status === 401) {
+            window.location.href = 'https://insights.bpoautoaccept.com/login.php';
+            return false;
+        }
+        const data = await response.json();
+        return data.authenticated;
+    } catch (error) {
+        console.error('Auth check failed:', error);
+        window.location.href = 'https://insights.bpoautoaccept.com/login.php';
+        return false;
+    }
+}
+
+// ---- Render date range ----
 function renderDateRange() {
     if (!DATA || !DATA.global.date_range) return;
     const { start, end } = DATA.global.date_range;
@@ -57,11 +76,23 @@ function updateLastUpdated() {
     lastUpdatedEl.textContent = `Updated: ${timeStr}`;
 }
 
-// ---- Fetch data ----
+// ---- Fetch data (with auth) ----
 async function loadData() {
+    // First, check auth
+    const authenticated = await checkAuth();
+    if (!authenticated) return;
+
     try {
-        const response = await fetch('https://insights.bpoautoaccept.com/get_data.php');
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const response = await fetch('https://insights.bpoautoaccept.com/get_data.php', {
+            credentials: 'include'
+        });
+        if (!response.ok) {
+            if (response.status === 401) {
+                window.location.href = 'https://insights.bpoautoaccept.com/login.php';
+                return;
+            }
+            throw new Error(`HTTP ${response.status}`);
+        }
         const jsonData = await response.json();
         DATA = jsonData;
         renderDateRange();
