@@ -19,6 +19,7 @@ const tableTitle      = document.getElementById('table-title');
 const inspectorList   = document.getElementById('inspector-list');
 const totalOrdersFooter = document.getElementById('total-orders-footer');
 const lastUpdated     = document.getElementById('last-updated');
+const dateRangeEl     = document.getElementById('date-range');
 
 const stateChartTitle   = document.getElementById('stateChartTitle');
 const itemChartTitle    = document.getElementById('itemChartTitle');
@@ -41,6 +42,15 @@ function getColor(index, alpha = 1) {
     return `rgba(0, 255, 136, ${Math.min(op, 1)})`;
 }
 
+// ---- Render date range ----
+function renderDateRange() {
+    if (!DATA || !DATA.global.date_range) return;
+    const { start, end } = DATA.global.date_range;
+    if (dateRangeEl) {
+        dateRangeEl.textContent = `📅 ${start} – ${end}`;
+    }
+}
+
 // ---- Fetch data from your cPanel backend ----
 async function loadData() {
     try {
@@ -52,12 +62,13 @@ async function loadData() {
         const now = new Date();
         const dateStr = now.toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' });
         lastUpdated.textContent = `updated ${dateStr}`;
+        // Date range
+        renderDateRange();
         // Re-render
         renderSidebar();
         switchView(currentView);
     } catch (error) {
         console.error('Failed to load data:', error);
-        // Optionally show an error state
         lastUpdated.textContent = '⚠️ update failed';
     }
 }
