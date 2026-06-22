@@ -19,6 +19,7 @@ const tableTitle      = document.getElementById('table-title');
 const inspectorList   = document.getElementById('inspector-list');
 const totalOrdersFooter = document.getElementById('total-orders-footer');
 const dateRangeEl     = document.getElementById('date-range');
+const lastUpdatedEl   = document.getElementById('last-updated');
 
 const stateChartTitle   = document.getElementById('stateChartTitle');
 const itemChartTitle    = document.getElementById('itemChartTitle');
@@ -39,43 +40,37 @@ function getColor(index, alpha = 1) {
     return `rgba(0, 255, 136, ${Math.min(op, 1)})`;
 }
 
-// ---- Render date range ----
+// ---- Render date range (no icon) ----
 function renderDateRange() {
-    if (!dateRangeEl) {
-        console.error('date-range element not found');
-        return;
-    }
-    if (!DATA || !DATA.global) {
-        console.warn('No data yet');
-        dateRangeEl.textContent = '⏳ loading...';
-        return;
-    }
-    if (!DATA.global.date_range) {
-        console.warn('No date_range in data – is the PHP script up to date?');
-        dateRangeEl.textContent = '📅 range unavailable';
-        return;
-    }
+    if (!DATA || !DATA.global.date_range) return;
     const { start, end } = DATA.global.date_range;
-    dateRangeEl.textContent = `📅 ${start} – ${end}`;
-    console.log('Date range set:', start, end);
+    if (dateRangeEl) {
+        dateRangeEl.textContent = `${start} – ${end}`;
+    }
+}
+
+// ---- Update last-updated time ----
+function updateLastUpdated() {
+    if (!lastUpdatedEl) return;
+    const now = new Date();
+    const timeStr = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    lastUpdatedEl.textContent = `Updated: ${timeStr}`;
 }
 
 // ---- Fetch data ----
 async function loadData() {
     try {
-        console.log('Fetching data...');
         const response = await fetch('https://insights.bpoautoaccept.com/get_data.php');
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const jsonData = await response.json();
         DATA = jsonData;
-        console.log('Data loaded, keys:', Object.keys(DATA));
-        console.log('Global keys:', Object.keys(DATA.global));
-        renderDateRange();   // <-- explicitly called here
+        renderDateRange();
+        updateLastUpdated();
         renderSidebar();
         switchView(currentView);
     } catch (error) {
         console.error('Failed to load data:', error);
-        if (dateRangeEl) dateRangeEl.textContent = '⚠️ data unavailable';
+        if (lastUpdatedEl) lastUpdatedEl.textContent = '⚠️ update failed';
     }
 }
 
