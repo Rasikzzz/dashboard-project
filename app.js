@@ -30,8 +30,8 @@ function round(val, digits = 2) {
 // ---- Fetch data from your cPanel backend ----
 async function loadData() {
     try {
-        // ⚠️ CHANGE THIS URL to your actual cPanel subdomain + file path
-        const response = await fetch('https://api.yourdomain.com/get_data.php');
+        // ✅ This is your live backend URL
+        const response = await fetch('https://insights.bpoautoaccept.com/get_data.php');
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const jsonData = await response.json();
         DATA = jsonData;
