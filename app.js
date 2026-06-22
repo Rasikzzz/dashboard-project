@@ -27,10 +27,11 @@ function round(val, digits = 2) {
     return Number(val.toFixed(digits));
 }
 
-// ---- Fetch data from server ----
+// ---- Fetch data from your cPanel backend ----
 async function loadData() {
     try {
-        const response = await fetch('get_data.php');  // adjust path if needed
+        // ⚠️ CHANGE THIS URL to your actual cPanel subdomain + file path
+        const response = await fetch('https://api.yourdomain.com/get_data.php');
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const jsonData = await response.json();
         DATA = jsonData;
@@ -38,7 +39,7 @@ async function loadData() {
         switchView(currentView);
     } catch (error) {
         console.error('Failed to load data:', error);
-        // Optionally show an error banner
+        // Optionally show an error message to the user
     }
 }
 
