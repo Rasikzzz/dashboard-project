@@ -206,7 +206,7 @@ function renderOverall() {
         { label: 'Avg / Week', value: round(g.avg_per_week) },
         { label: 'Avg / Month', value: round(g.avg_per_month) },
         { label: 'Avg / Year', value: round(g.avg_per_year) },
-        { label: 'Email Rate', value: g.email_success_rate_global + '%' },
+        { label: 'Email Rate', value: round(g.email_success_rate_global) + '%' }, // ✅ FIXED
         { label: 'Inspectors', value: Object.keys(DATA.per_inspector).length },
     ];
     renderKPIs(kpis);
@@ -240,7 +240,7 @@ function renderInspector(name) {
         { label: 'Avg / Week', value: round(data.avg_per_week) },
         { label: 'Avg / Month', value: round(data.avg_per_month) },
         { label: 'Avg / Year', value: round(data.avg_per_year) },
-        { label: 'Email Rate', value: data.email_success_rate + '%' },
+        { label: 'Email Rate', value: round(data.email_success_rate) + '%' }, // also fixed here
         { label: 'Top State', value: data.top_state || '—' },
         { label: 'Days Active', value: data.date_range_days || '—' },
     ];
