@@ -260,12 +260,17 @@ function renderInspector(name) {
 
 // ---- Init ----
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.client-list').addEventListener('click', function(e) {
-        const item = e.target.closest('.client-item');
-        if (!item) return;
-        const target = item.dataset.target;
-        if (target) switchView(target);
-    });
+    const list = document.querySelector('.client-list');
+    if (list) {
+        list.addEventListener('click', function(e) {
+            const item = e.target.closest('.client-item');
+            if (!item) return;
+            const target = item.dataset.target;
+            if (target) switchView(target);
+        });
+    } else {
+        console.error('Sidebar container not found');
+    }
     loadData();
     startAutoRefresh(60);
 });
